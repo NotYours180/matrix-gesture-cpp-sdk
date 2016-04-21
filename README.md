@@ -57,7 +57,7 @@ You need to compile the C++ project using cmake. In Docker, a precompiled projec
 
 ### Usage without Docker
 
-The functionality is the same as long as you have the required dependencies this should work outside of Docker with gcc 4.9+. I will include a static lib in the near future to help ease compilation.
+The functionality is the same as long as you have the required dependencies this should work outside of Docker with gcc 4.9+. I have included the static lib `libgesture.a` to help ease compilation outside of docker.
 
 ### Documentation
 The documentation can be found [here](http://gesture.ai/#/develop "Gesture.ai Documentation")
