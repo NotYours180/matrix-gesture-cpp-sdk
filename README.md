@@ -1,5 +1,5 @@
 # Matrix Gesture C++ SDK
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/tree/master/examples/logo.png "Gesture.ai Logo")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/logo.png "Gesture.ai Logo")
 
 A high performance C++ library with node bindings to easily incorporate gesture recognition into any project. It uses a trained object detection method (with over 100,000 samples per gesture!) and is therefore robust to different skin colors and lighting changes. 
 
@@ -7,9 +7,9 @@ For the initial release the SDK is only linux compatible, but this means it can 
 
 There are currently three detectable gestures: open PALM, THUMB UP, and FIST. Tracking options are available so it can track changes between hands. Smoothing filters are available so fine control can be used.
 
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/tree/master/examples/palm "Palm")
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/tree/master/examples/fist "Fist")
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/tree/master/examples/thumb_up "Thumb Up")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/palm.jpg "Palm")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/fist.jpg "Fist")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/thumb_up.jpg "Thumb Up")
 
 ### Dependences:
 Linux
@@ -20,11 +20,11 @@ Cmake 2.8+
 
 As it is currently only linux compatible we have created an image on DockerHub which includes all required dependencies. If you would like to build the Dockerfile yourself it is included in the repository.
 
-First give root access to Docker as an X server. This will allow the camera feed to be accessed.
+1. First give root access to Docker as an X server. This will allow the camera feed to be accessed.
 
 ```xhost local:root```
 
-Download the image and create and run a daemon container, giving it access to your default camera and a port through which to host a webserver. 
+2. Download the image and create and run a daemon container, giving it access to your default camera and a port through which to host a webserver. 
 
 ```sudo docker run -itd -p 8080:8080 -p 3000:3000 --privileged \
 -name gesture \
@@ -32,7 +32,7 @@ Download the image and create and run a daemon container, giving it access to yo
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=$DISPLAY admobilize/gesture```
 
-Execute a command inside the docker, to run the cpp example `gesture_example`
+3. Execute a command inside the docker, to run the cpp example `gesture_example`
 
 ```sudo docker exec -it gesture /bin/sh -c 'cd ~/matrix-gesture-cpp-sdk/; ./gesture_example'```
 
@@ -60,7 +60,7 @@ You need to compile the C++ project using cmake. In Docker, a precompiled projec
 As long as you have the required dependencies this should work outside of Docker with gcc 4.9+. I will include a static lib in the near future to help ease compilation.
 
 ### Documentation
-The documentation can be found [here](gesture.ai/#/develop "Gesture.ai Documentation")
+The documentation can be found [here](http://gesture.ai/#/develop "Gesture.ai Documentation")
 
 ### Community
-Visit and join our community [here](community.gesture.ai "Gesture.ai Community")
+Visit and join our community [here](http://community.gesture.ai "Gesture.ai Community")
