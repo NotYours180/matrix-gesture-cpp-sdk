@@ -2,29 +2,27 @@
 #define GESTUREMANAGER_H
 
 #include "opencv2/opencv.hpp"
+#include <list>
+
+class GestureImpl;
 
 class Detected_Object {
 public:
-	//Constructors & Destructors
     Detected_Object();
     Detected_Object(int x, int y, int width, int height, int hand_type, int id);
     ~Detected_Object();
-    
-    //Class Variables
     int x_, y_, xc_, yc_, width_, height_, id_, hand_type_;
 
 };
 
-class Gesture
-{
+class Gesture {
 public:
     //Constructors
     Gesture();
-    Gesture(int camera);
-
-    //Class Variables
-    cv::Mat frame_;
-    cv::VideoCapture camera_;
+    Gesture(int camera) ;
+    ~Gesture();
+    cv::Mat *frame_;
+    cv::VideoCapture *camera_;
 
     //Methods
     std::vector<Detected_Object> detect(int hand_type);
@@ -44,6 +42,9 @@ public:
     void set_frame_flip(bool flip_frame);
     void detection_quality(int quality);
     void stop_video_capture();
+
+private:
+    GestureImpl* impl_;
 
 };
 
