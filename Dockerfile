@@ -39,6 +39,8 @@ RUN apt-get update && apt-get -yq install \
   libavresample-dev \
   libpostproc-dev \
   libopenexr-dev \
+  libpthread-stubs0-dev \
+  libssl-dev \
   pkg-config \
   python-dev \
   vim \
@@ -96,9 +98,9 @@ RUN mkdir -p /opt/src/json/build \
 
 #---------------------------------- Gesture ---------------------------------------
 
-RUN git clone https://github.com/matrix-io/matrix-gesture-cpp-sdk.git /root/matrix-gesture-cpp-sdk \
-  && git clone https://github.com/matrix-io/matrix-gesture-node-sdk.git /root/matrix-gesture-node-sdk
+RUN git clone https://github.com/matrix-io/matrix-gesture-cpp-sdk.git /root/gesture-cpp-sdk \
+  && git clone https://github.com/matrix-io/matrix-gesture-node-sdk.git /root/gesture-node-sdk
 
-RUN cd /root/matrix-gesture-node-sdk \
+RUN cd /root/gesture-node-sdk \
   && npm install \
   && npm run root-setup

@@ -9,14 +9,14 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 cmake_policy(SET CMP0015 NEW)
 link_directories(.)
 set(GESTURE_LIB
-	libgesture.so
+	libgesture.a
 )
 
-set(EXAMPLE_SRC
-	example.cpp
+set(TEST_SRC
+	test.cpp
 )
 
-add_executable(gesture_example ${EXAMPLE_SRC})
-set_property(TARGET gesture_example PROPERTY CXX_STANDARD 11)
+add_executable(gesture_test ${TEST_SRC})
+set_property(TARGET gesture_test PROPERTY CXX_STANDARD 11)
 
-target_link_libraries(gesture_example ${GESTURE_LIB} ${OpenCV_LIBRARIES})
+target_link_libraries(gesture_test ${GESTURE_LIB} ${OpenCV_LIBRARIES})
