@@ -1,13 +1,13 @@
 # Matrix Gesture C++ SDK
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/logo.png "Gesture.ai Logo")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/docker/examples/logo.png "Gesture.ai Logo")
 
 A high performance C++ library with node bindings to easily incorporate gesture recognition into any project. It uses a trained object detection method (with over 100,000 samples per gesture!) and is therefore robust to different skin colors and lighting changes. 
 
 There are currently three detectable gestures: open PALM, THUMB UP, and FIST. Tracking options are available so it can track changes between hands. Smoothing filters are available so fine control can be used.
 
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/palm.jpg "Palm")
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/fist.jpg "Fist")
-![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/examples/thumb_up.jpg "Thumb Up")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/docker/examples/palm.jpg "Palm")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/docker/examples/fist.jpg "Fist")
+![alt text](https://github.com/matrix-io/matrix-gesture-node-sdk/raw/master/docker/examples/thumb_up.jpg "Thumb Up")
 
 ### Dependences:
 ###### Linux

@@ -39,8 +39,9 @@ RUN apt-get update && apt-get -yq install \
   libavresample-dev \
   libpostproc-dev \
   libopenexr-dev \
-  libpthread-stubs0-dev \
   libssl-dev \
+  libcurl4-openssl-dev \
+  libpthread-stubs0-dev \
   pkg-config \
   python-dev \
   vim \
